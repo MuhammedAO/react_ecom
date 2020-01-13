@@ -1,11 +1,18 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 
 export default class Product extends Component {
+    state={
+    products:[]
+    }
     render() {
         return (
-            <div>
-            <h3>Product</h3>
+            <Fragment>
+            <div className="py-5">
+            <div className="container">
+                
             </div>
+            </div>
+            </Fragment>
         )
     }
 }

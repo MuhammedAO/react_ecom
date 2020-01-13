@@ -7,13 +7,13 @@ import styled from 'styled-components'
 export default class Navbar extends Component {
     render() {
         return (
-        <NavWrapper className="navbar navbar-expand-sm navbar-dark px-sm-5">
+        <NavWrapper className="navbar navbar-expand-sm  px-sm-5">
         <Link to="/">
         <img src={logo} alt="logo" className="navbar-brand"/>
         </Link>
         <ul className="navbar-bar ulbar align-item-center">
         <li className="nav-item ml-5">
-        <Link to="/products" className="nav-link">
+        <Link to="/" className="nav-link">
         Products
         </Link>
         </li>
