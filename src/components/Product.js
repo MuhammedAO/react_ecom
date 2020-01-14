@@ -4,7 +4,6 @@ import {Link} from 'react-router-dom'
 import {ProductConsumer} from '../context'
 
 export default class Product extends Component {
-
     render() {
         const {
         id,
@@ -31,7 +30,15 @@ export default class Product extends Component {
       
          </div>
          {/* card footer */}
-         
+         <div className="card-footer d-flex justify-content-between">
+        <p className="align-self-center mb-0">
+        {title}
+        </p>
+        <h5 className="text-blue font-italic mb-0">
+        <span className="mr-1">&#x20a6;</span>
+        {price}
+        </h5>
+         </div>
          </div>
         </ProductWrapper>
         )
