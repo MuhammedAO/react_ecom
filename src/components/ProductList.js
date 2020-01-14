@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import Product from './Product'
-import {storeProducts} from '../data'
+// import {storeProducts} from '../data'
 import Title from './Title'
 import { ProductConsumer } from '../context'
 

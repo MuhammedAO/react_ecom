@@ -11,7 +11,7 @@ export default class Navbar extends Component {
         <Link to="/">
         <img src={logo} alt="logo" className="navbar-brand"/>
         </Link>
-        <ul className="navbar-bar ulbar align-item-center">
+        <ul className="navbar-nav align-item-center">
         <li className="nav-item ml-5">
         <Link to="/" className="nav-link">
         Products
