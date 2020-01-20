@@ -8,7 +8,7 @@ const ProductContext = createContext();
      state = {
      products: [],
      detailProduct,
-     cart:[],
+     cart: storeProducts, //tempoary: just to see what i'm working with.
      modalOpen: false,
      modalProduct: detailProduct,
      cartSubTotal: 0,
