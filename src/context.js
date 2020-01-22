@@ -87,7 +87,14 @@ const ProductContext = createContext();
      }
 
      clearCart = () => {
-        console.log('cart cleared');
+       this.setState(() => {
+        return {
+        cart:[]
+        }
+       }, () => {
+        this.setProducts();
+        this.addTotals();
+       })
         
      }
 
