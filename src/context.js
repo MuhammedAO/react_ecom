@@ -8,7 +8,7 @@ const ProductContext = createContext();
      state = {
      products: [],
      detailProduct,
-     cart: storeProducts, //tempoary: just to see what i'm working with.
+     cart: [], 
      modalOpen: false,
      modalProduct: detailProduct,
      cartSubTotal: 0,
@@ -55,7 +55,7 @@ const ProductContext = createContext();
 
     this.setState(() => {
     return {products: tempProd, cart:[...this.state.cart, product]}
-    }, () => {console.log(this.state);
+    }, () => {this.addTotals();
     })
      }
 
@@ -89,6 +89,22 @@ const ProductContext = createContext();
      clearCart = () => {
         console.log('cart cleared');
         
+     }
+
+     addTotals = () => {
+        let subTotal = 0
+        this.state.cart.map(item => subTotal += item.total)
+        const tempTax = subTotal * 0.1
+        const Tax = parseFloat(tempTax.toFixed(2))
+       const total = subTotal + Tax
+
+       this.setState(() => {
+        return {
+        cartSubTotal: subTotal,
+        cartTax: Tax,
+        cartTotal: total
+        }
+       })
      }
 
 
