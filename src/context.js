@@ -90,8 +90,24 @@ const ProductContext = createContext();
      }
      
      decrement = id => {
-        console.log('descending');
-        
+        let tempCart = [...this.state.cart]
+        const selectedProduct = tempCart.find(item => item.id === id) 
+        const index = tempCart.indexOf(selectedProduct)
+
+        const product = tempCart[index]
+        product.count = product.count - 1
+
+        if (product.count === 0) {
+           return this.removeItem(id)
+        }
+
+        else{
+        product.total = product.count * product.price
+        this.setState(() => {return{
+            cart:[...tempCart]
+        }}, () => {this.addTotals()})
+        }
+
      }
 
      removeItem = id => {
